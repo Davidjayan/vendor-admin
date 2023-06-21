@@ -66,6 +66,8 @@ export const ListVendors = (props: Props) => {
         </Button>
       </Grid>
       {vendors ? (
+        vendors.length>1?(
+
         <Container>
           <Sheet>
             <Table>
@@ -141,6 +143,13 @@ export const ListVendors = (props: Props) => {
             <List></List>
           </Sheet>
         </Container>
+        ):(
+          <Container>
+            <Typography>
+              No data found
+            </Typography>
+          </Container>
+        )
       ) : (
         <Loader minHeight={20} />
       )}
